@@ -1,0 +1,386 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: white;
+}
+
+.composition {
+    width: min(90vw, 90vh);
+    aspect-ratio: 1 / 1;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    background: #222;
+    gap: 6px;
+    border: 6px solid #222;
+}
+
+.blue {
+    background: #4169d8;
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+}
+
+.top-white {
+    background: #eeeeee;
+    grid-column: 3 / 7;
+    grid-row: 1 / 2;
+}
+
+.yellow {
+    background: #f4c400;
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+}
+
+.right-top {
+    background: #eeeeee;
+    grid-column: 5 / 7;
+    grid-row: 2 / 5;
+}
+
+.red {
+    background: #cc2528;
+    grid-column: 1 / 4;
+    grid-row: 4 / 7;
+}
+
+.right-bottom {
+    background: #eeeeee;
+    grid-column: 5 / 7;
+    grid-row: 5 / 7;
+}
+
+/* TASK 2 - COMPONENT LIBRARY */
+
+.task2-page {
+    margin: 0;
+    padding: 2rem;
+    min-height: 100vh;
+    display: block;
+    background: #f4f6f8;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.task2-page > h1 {
+    text-align: center;
+    color: #2457c5;
+}
+
+.component {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+}
+
+.component h2 {
+    margin-top: 0;
+}
+
+/* 1. NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #2457c5;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+button {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 2. CARDS */
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    background: #eef3ff;
+    border: 1px solid #ccd8f5;
+    border-radius: 8px;
+}
+
+.card p {
+    flex-grow: 1;
+}
+
+.card button {
+    align-self: flex-start;
+    background: #2457c5;
+    color: white;
+}
+
+/* 3. PAGINATION */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.pages {
+    display: flex;
+    gap: 0.4rem;
+    margin-left: auto;
+}
+
+.results {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.pagination button {
+    background: #eef3ff;
+}
+
+/* 4. COMMENT */
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.avatar {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2457c5;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.comment-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.comment-content p {
+    margin-bottom: 0;
+}
+
+/* 5. PRICING */
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.plan {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: #eef3ff;
+    border: 1px solid #ccd8f5;
+    border-radius: 10px;
+}
+
+.plan p:not(.price) {
+    flex-grow: 1;
+}
+
+.plan button {
+    background: #2457c5;
+    color: white;
+}
+
+.recommended {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background: #dce7ff;
+    border: 2px solid #2457c5;
+}
+
+.badge {
+    align-self: flex-start;
+    padding: 0.3rem 0.6rem;
+    background: #2457c5;
+    color: white;
+    border-radius: 5px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* TASK 3 - THREE LAYOUTS, ONE MARKUP */
+
+.task3-page {
+    margin: 0;
+    padding: 2rem;
+    min-height: 100vh;
+    background: #f4f6f8;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.task3-page > h1 {
+    text-align: center;
+    color: #2457c5;
+    margin-bottom: 2rem;
+}
+
+.layout {
+    gap: 1rem;
+}
+
+.item {
+    background: white;
+    border: 1px solid #ccd8f5;
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.item-content {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.item-content h2 {
+    margin-top: 0;
+}
+
+.item time {
+    padding: 0 1rem 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ----------------------- */
+/* 1. GRID MODE            */
+/* ----------------------- */
+
+.grid-mode {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+/* ----------------------- */
+/* 2. LIST MODE            */
+/* ----------------------- */
+
+.list-mode {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.list-mode .item {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.list-mode .item img {
+    flex: 0 1 14rem;
+    width: auto;
+    max-width: 100%;
+    align-self: stretch;
+}
+
+.list-mode .item-content {
+    flex: 1 1 16rem;
+}
+
+.list-mode .item time {
+    margin-left: auto;
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+/* ----------------------- */
+/* 3. MAGAZINE MODE        */
+/* ----------------------- */
+
+.magazine-mode {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+
+    grid-auto-flow: dense;
+    grid-auto-columns: minmax(0, 1fr);
+}
+
+.magazine-mode .lead {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.magazine-mode .lead h2 {
+    font-size: 2rem;
+}
+
+.magazine-mode .lead img {
+    aspect-ratio: 16 / 10;
+}
